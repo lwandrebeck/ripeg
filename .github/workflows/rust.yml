@@ -1,0 +1,54 @@
+name: Rust
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        toolchain:
+          - stable
+          - beta
+          - nightly
+    steps:
+    - uses: actions/checkout@v2
+    - name: install gnuplot
+      run: sudo apt-get update && sudo apt-get install -y gnuplot
+    - run: rustup update ${{ matrix.toolchain }} && rustup default ${{ matrix.toolchain }}
+    - name: Cargo fmt
+      uses: actions-rs/cargo@v1
+      with:
+        command: fmt
+        args: --all -- --check
+    - name: Build
+      uses: actions-rs/cargo@v1
+      with:
+        command: build
+        args: --release --verbose
+    - name: Cargo clippy
+      uses: actions-rs/cargo@v1
+      with:
+        command: clippy
+        args: --all -- -D warnings
+    - name: Run tests
+      uses: actions-rs/cargo@v1
+      with:
+        command: test
+        args: --release --verbose
+    - name: Run bench
+      uses: actions-rs/cargo@v1
+      with:
+        command: bench
+    - name: Doc
+      uses: actions-rs/cargo@v1
+      with:
+        command: doc
+        args: --all --verbose
