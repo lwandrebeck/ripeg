@@ -1,4 +1,14 @@
-## Welcome to GitHub Pages
+## Welcome to ripeg homepage !
+
+Not much content for now, as this project is _very_ early in its infancy. All the meat is [here](https://zyedidia.github.io/preprints/gpeg_sle21.pdf) and we want to port [that Go implementation](https://github.com/zyedidia/gpeg) to Rust.
+
+CI and such are currently being configured before work on code begins.
+
+See the repository [README](https://github.com/lwandrebeck/ripeg/blob/main/README.md) which will probably be the most up-to-date source of informations until everything is up and running and coding phase has begun.
+
+Thanks for your interest in incremental PEG parsing, your contributions are **very** welcome !
+
+Content below is just kept as a reminder.
 
 You can use the [editor on GitHub](https://github.com/lwandrebeck/ripeg/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
