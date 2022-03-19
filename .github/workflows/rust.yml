@@ -51,4 +51,4 @@ jobs:
       uses: actions-rs/cargo@v1
       with:
         command: doc
-        args: --all --verbose
+        args: --release --all --verbose

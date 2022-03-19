@@ -1,0 +1,18 @@
+[package]
+authors = ["Laurent Wandrebeck <l.wandrebeck@quelquesmots.fr>"]
+categories = ["parsing"]
+description = "Incremental PEG parser Rust library"
+documentation = "https://docs.rs/ripeg"
+edition = "2021"
+homepage = "https://lwandrebeck.github.io/ripeg/"
+keywords = ["grammar", "parse", "parser", "parsing", "peg"]
+license = "GPL-3.0-or-later"
+name = "ripeg"
+readme = "README.md"
+repository = "https://github.com/lwandrebeck/ripeg"
+version = "0.1.0"
+
+[dependencies]
+
+[dev-dependencies]
+criterion = { git = "https://github.com/bheisler/criterion.rs", branch = "version-0.4" }
