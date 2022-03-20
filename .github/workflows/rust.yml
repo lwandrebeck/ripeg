@@ -52,3 +52,9 @@ jobs:
       with:
         command: doc
         args: --release --all --verbose
+    - uses: actions/checkout@master
+    - uses: codecov/codecov-action@v2
+    - name: Coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}

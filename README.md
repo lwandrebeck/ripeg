@@ -16,11 +16,18 @@
 ![commits](https://img.shields.io/github/commit-activity/m/lwandrebeck/ripeg)
 
 [![ripeg Continuous Integration](https://github.com/lwandrebeck/ripeg/actions/workflows/rust.yml/badge.svg)](https://github.com/lwandrebeck/ripeg/actions/workflows/rust.yml)
-[![Coverage Status](https://coveralls.io/repos/github/lwandrebeck/ripeg/badge.svg?branch=master)](https://coveralls.io/github/lwandrebeck/ripeg?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/lwandrebeck/ripeg/badge.svg?branch=main)](https://coveralls.io/github/lwandrebeck/ripeg?branch=main)
 [![codecov](https://codecov.io/gh/lwandrebeck/ripeg/branch/main/graph/badge.svg)](https://codecov.io/gh/lwandrebeck/ripeg)
 
 Incremental PEG parsing in Rust
 
 This project intends to be a Rust port of https://github.com/zyedidia/gpeg/ which is itself inspired by http://www.inf.puc-rio.br/~roberto/lpeg/. One of existing research publications about incremental PEG is https://zyedidia.github.io/preprints/gpeg_sle21.pdf
 
+## Contributing
+PRs are more than welcome, I’d like a lot this project not to be a one-random-guy work. Please read [Contributing](https://github.com/lwandrebeck/ripeg/blob/main/CONTRIBUTING.md)
+
+## Code of Conduct
+Please follow the [CoC from rust-lang](https://www.rust-lang.org/policies/code-of-conduct). I’ll be glad if I can avoid any kind of moderation, I have better to do with my time, thanks !
+
+## Current status
 Nothing to see here yet. CI and such are being configured before code development begins.
