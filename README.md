@@ -35,7 +35,7 @@ Nothing to see here yet. CI and such are being configured before code developmen
 
 ## Planned Roadmap
 * 20220319 0.1.0 : ripeg crate published so name is reserved.
-* 202203?? 0.1.1 : release with CI, code coverage configured, and use of cargo-nextest.
+* 20220322 0.1.1 : release with CI, code coverage configured, and use of cargo-nextest.
 * 2022???? 0.1.2 : release with functions/methods prototypes and todo!(); bodies.
 * 202????? 0.1.3..n: replace todo!(); function/methods bodies with real code.
 * 202????? 0.2.0 : 1st usable version.
