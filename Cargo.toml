@@ -5,14 +5,35 @@ description = "Incremental PEG parser Rust library"
 documentation = "https://docs.rs/ripeg"
 edition = "2021"
 homepage = "https://lwandrebeck.github.io/ripeg/"
-keywords = ["grammar", "parse", "parser", "parsing", "peg"]
+keywords = ["grammar", "packrat", "parse", "parser", "parsing", "peg"]
 license = "GPL-3.0-or-later"
 name = "ripeg"
 readme = "README.md"
 repository = "https://github.com/lwandrebeck/ripeg"
-version = "0.1.1"
+version = "0.1.2"
 
 [dependencies]
+bitvec = "1"
 
 [dev-dependencies]
 criterion = { git = "https://github.com/bheisler/criterion.rs", branch = "version-0.4" }
+
+[[bench]]
+name = "charset_bench"
+harness = false
+
+[profile.bench]
+lto = true
+
+[profile.release]
+lto = true
+
+[profile.test]
+codegen-units = 16
+debug = false
+debug-assertions = false
+incremental = false
+lto = true
+opt-level = 3
+overflow-checks = false
+rpath = false

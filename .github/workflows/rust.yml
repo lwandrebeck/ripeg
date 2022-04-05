@@ -2,7 +2,7 @@ name: Rust
 
 on:
   push:
-    branches: [ main, staging, trying ]
+    branches: [ main, staging, trying, v0.1.* ]
   pull_request:
     branches: [ main ]
 
@@ -20,8 +20,8 @@ jobs:
           - nightly
     steps:
     - uses: actions/checkout@v2
-    - name: install gnuplot
-      run: sudo apt-get update && sudo apt-get install -y gnuplot
+    #- name: install gnuplot
+    #  run: sudo apt-get update && sudo apt-get install -y gnuplot
     - run: rustup update ${{ matrix.toolchain }} && rustup default ${{ matrix.toolchain }} && rustup component add rustfmt clippy
     - name: Cargo fmt
       uses: actions-rs/cargo@v1
@@ -42,30 +42,41 @@ jobs:
     - name: Run tests
       uses: actions-rs/cargo@v1
       with:
-        command: nextest
-        args: run --release --verbose
-    - name: Run bench
-      uses: actions-rs/cargo@v1
-      with:
-        command: bench
+        command: test
+        args: --release --verbose
+    #- name: Run bench
+    #  uses: actions-rs/cargo@v1
+    #  with:
+    #    command: bench
     - name: Doc
       uses: actions-rs/cargo@v1
       with:
         command: doc
         args: --release --all --verbose
     - uses: actions/checkout@master
-    - name: run cargo tarpaulin
-      uses: actions-rs/tarpaulin@v0.1
-      with:
-          version: '0.19.1'
-          args: '--release --verbose --output-dir coverage --out Lcov'
-    - uses: codecov/codecov-action@v2
-    - name: Coveralls
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-    - name: Archive code coverage results
-      uses: actions/upload-artifact@v1
-      with:
-        name: code-coverage-report
-        path: coverage/lcov.info
+  coverage:
+    name: Coverage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Rust Nightly
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: nightly
+          default: true
+          profile: minimal
+      - name: run cargo tarpaulin
+        uses: actions-rs/tarpaulin@v0.1
+        with:
+          version: '0.20.0'
+          args: '--release --verbose --run-types Doctests --output-dir coverage --out Lcov'
+      - uses: codecov/codecov-action@v2
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v1
+        with:
+          name: code-coverage-report
+          path: coverage/lcov.info

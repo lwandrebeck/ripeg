@@ -22,11 +22,13 @@ and to wrangle over those already [open](https://github.com/lwandrebeck/ripeg/is
 
 ### Code
 
-Since nothing has yet been implemented, feel free to submit your PRs
+Only one module has been implemented for now, feel free to submit your PRs. Work is ongoing on isa module now, if that can help to prevent duplicate work.
 
 ### Tests
 
 Tests are mandatory for a PR to be accepted. We want coverage to flirt with 100%. Luckily for us, having a complete test coverage is far easier to get with a brand new project.
+
+Please Add your tests as doctests for *every* method.
 
 ### Benchmark
 
@@ -54,4 +56,4 @@ The normal rust coding style is checked by [rustfmt](https://github.com/rust-lan
 Readable code is the first step on having good and safe libraries.
 
 To avoid slight differences appearing in nightly versions, please
-use the following command to run rustfmt: `cargo +stable fmt`
+use the following command to run rustfmt: `cargo +stable fmt` before submitting a PR.
