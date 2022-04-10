@@ -10,7 +10,7 @@ license = "GPL-3.0-or-later"
 name = "ripeg"
 readme = "README.md"
 repository = "https://github.com/lwandrebeck/ripeg"
-version = "0.1.2"
+version = "0.1.3"
 
 [dependencies]
 bitvec = "1"
@@ -19,8 +19,9 @@ bitvec = "1"
 criterion = { git = "https://github.com/bheisler/criterion.rs", branch = "version-0.4" }
 
 [[bench]]
-name = "charset_bench"
+name = "benchmarks"
 harness = false
+path = "benchmarks/main.rs"
 
 [profile.bench]
 lto = true
