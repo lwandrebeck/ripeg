@@ -14,7 +14,7 @@
 ![commits](https://img.shields.io/github/commit-activity/m/lwandrebeck/ripeg)
 
 [![License: GPL v3+](https://img.shields.io/badge/License-GPL%20v3+-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Minimum rustc version](https://img.shields.io/badge/rustc-1.59+-blue.svg)](#rust-version-requirements)
+[![Minimum rustc version](https://img.shields.io/badge/rustc-1.60+-blue.svg)](#rust-version-requirements)
 [![dependency status](https://deps.rs/repo/github/lwandrebeck/ripeg/status.svg)](https://deps.rs/repo/github/lwandrebeck/ripeg)
 
 [![issues](https://img.shields.io/github/issues/lwandrebeck/ripeg.svg)](https://github.com/lwandrebeck/ripeg/issues)
@@ -33,17 +33,24 @@ Please follow the [CoC from rust-lang](https://www.rust-lang.org/policies/code-o
 ## Current status
 A first part of code has been ported, but you definitely can't use that crate yet. 
 
-## Roadmap
+## Roadmap && Changelog
 * 20220319 0.1.0 : ripeg crate published so name is reserved.
-* 20220322 0.1.1 : release with CI, code coverage configured, and use of cargo-nextest.
+* 20220322 0.1.1 : Release with CI, code coverage configured, and use of cargo-nextest.
 * 20220405 0.1.2 : 
-  * release with charset module ported. 
+  * Release with __charset module ported__. 
   * Use of cargo test instead of nextest because it does not support doc tests yet. 
   * Comment out criterion bench in github actions as results are useless in CI env. 
   * Update tarpaulin to 0.20.0, and fix test coverage. 
   * Please note that charset methods prototypes may change.
-* 2022???? 0.1.3 : release with isa module ported.
-* 202????? 0.1.4..n: port other modules.
+* 20220410 0.1.3 :
+  * Release with __isa module ported__.
+  * Update benchmarks
+  * Please note that isa will probably change until 0.1.6 is released.
+* 202????? 0.1.4 : release with __input module ported__.
+* 202????? 0.1.5 : release with __pattern module ported__.
+* 202????? 0.1.6 : release with __memo module ported__.
+* 202????? 0.1.6 : release with __vm module ported__.
+* 202????? 0.1.7..n: port other modules.
 * 202????? 0.2.0 : 1st usable version.
 * 202????? 0.x.y : optimize
 * 202????? 1.0.0 : stable release.

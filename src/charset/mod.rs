@@ -15,7 +15,7 @@
 // You should have received a copy of the GNU General Public License
 // along with ripeg.  If not, see <http://www.gnu.org/licenses/>.
 
-//! charset modules provides data types and methods for managing sets of characters.
+//! charset module provides data types and methods for managing sets of characters.
 
 use std::ops::Not;
 
