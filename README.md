@@ -20,7 +20,7 @@
 [![issues](https://img.shields.io/github/issues/lwandrebeck/ripeg.svg)](https://github.com/lwandrebeck/ripeg/issues)
 [![closed](https://img.shields.io/github/issues-closed/lwandrebeck/ripeg.svg)](https://github.com/lwandrebeck/ripeg/issues?q=is%3Aissue+is%3Aclosed)
 [![pr](https://img.shields.io/github/issues-pr/lwandrebeck/ripeg.svg)](https://github.com/lwandrebeck/ripeg/pulls)
-[![prc](https://img.shields.io/github/issues-pr-closed/lwandrebeck/ripeg.svg)](https://github.com/lwandrebeck/ripeg/pulls?q=is%3Apr+is%3Aclosed)
+[![prc](https://img.shields.io/github/issues-pr-closed/lwandrebeck/ripeg.svg)](https://github.com/lwandrebeck/ripeg/pulls?q=is%3Apr+is%3Aclosed) [![Join the chat at https://gitter.im/ripeg/community](https://badges.gitter.im/ripeg/community.svg)](https://gitter.im/ripeg/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 This project intends to be a Rust port of https://github.com/zyedidia/gpeg/ which is itself inspired by http://www.inf.puc-rio.br/~roberto/lpeg/. Related research publications about incremental PEG are https://zyedidia.github.io/notes/yedidia_thesis.pdf and https://zyedidia.github.io/preprints/gpeg_sle21.pdf
 
